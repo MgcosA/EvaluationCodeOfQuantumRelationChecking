@@ -468,9 +468,9 @@
 			}
             else
             {
-                let m = DrawRandomInt(0, 2 ^ Nqs - 1);
-                let state1 = TestedState(Nqs, InputIntPlusNegAndRun(m, Proc, _), TOTAL(Nqs));
-                let state2 = TestedState(Nqs, InputIntMinusNegAndRun(m, Proc, _), TOTAL(Nqs));
+                let (m, n) = DrawTwoRandomInt(0, 2 ^ Nqs - 1);
+                let state1 = TestedState(Nqs, InputIntLEAndRun(m, Proc, _), TOTAL(Nqs));
+                let state2 = TestedState(Nqs, InputIntLEAndRun(n, Proc, _), TOTAL(Nqs));
                 let Na1a2 = SwapTestForTwoStates(state1, state2, NSTrepeat);
                 let r1 = 1.0 - 2.0 * IntAsDouble(Na1a2) / IntAsDouble(NSTrepeat);
                 //Message($"A1A2 : {r1}");
