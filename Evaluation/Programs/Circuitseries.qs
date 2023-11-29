@@ -20,6 +20,7 @@
 
     // Length(qs) == 2
     // H2CX12Z1Z2CX12H2 == X2
+    //Cir1A
     operation H2CX12Z1Z2CX12H2(qs : Qubit[]) : Unit
     {
         H(qs[1]);
@@ -29,6 +30,7 @@
         CNOT(qs[0], qs[1]);
         H(qs[1]);
     }
+    //Cir1B
     operation X2(qs : Qubit[]) : Unit
     {
         X(qs[1]);
@@ -85,6 +87,7 @@
 
 
     // Length(qs) == 3
+    //Cir2A
     operation QCtrlEndM(qs : Qubit[]) : Unit
     {
         CNOT(qs[0], qs[1]);
@@ -92,6 +95,7 @@
         let m0 = M(qs[0]);
         let m1 = M(qs[1]);
     }
+    //Cir2B
     operation BeginMCCtrl(qs : Qubit[]) : Unit
     {
         let m0 = M(qs[0]);
